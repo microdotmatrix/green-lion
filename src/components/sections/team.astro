@@ -1,0 +1,122 @@
+---
+// Current company associates section
+
+import Profile from "@/components/elements/profile.astro";
+import ExternalLink from "../elements/external-link.astro";
+
+import jeffDayton from "@/assets/images/team/jeff-dayton.jpg";
+import johnPolinski from "@/assets/images/team/john-polinski.jpg";
+import mattWatson from "@/assets/images/team/matt-watson.jpg";
+import mikeBologna from "@/assets/images/team/mike-bologna.jpg";
+---
+
+<div class="content py-8 mt-12 max-w-screen-2xl">
+  <header class="flex flex-col items-center justify-center">
+    <h2 class="accent-underline">Our Team</h2>
+  </header>
+  <div id="team-list" class="mx-auto px-4 py-8 sm:px-6 sm:py-12">
+    <ul id="gli-team" class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
+      <li class="flex flex-col space-y-4">
+        <Profile name="Mike Bologna" title="CEO" image={mikeBologna}>
+          <p>
+            Mike Bologna is a decisive, personable leader with extensive
+            experience in supply chain technology, operational strategy, and
+            process optimization. He focuses on sustainable growth, efficiency,
+            and socially conscious practices across diverse industries, from
+            aerospace to cannabis. As CEO of Green Lion Innovations and an
+            advisor to portfolio companies like Whoopi and Maya, Mike addresses
+            unique challenges and opportunities within multiple sectors.
+          </p>
+        </Profile>
+      </li>
+      <li class="flex flex-col space-y-4">
+        <Profile name="Matt Watson" title="CDO" image={mattWatson}>
+          <p>
+            Matt Watson began his career in the cannabis industry as a
+            glassblower in the early 2000s, opening his first retail store and
+            glass gallery in 2009. With deep expertise in glassblowing,
+            electronics, and consumer retail, Matt has designed and manufactured
+            pioneering products, including his first patented electronic dabbing
+            device in 2015. As the lead product developer for <ExternalLink
+              href="https://dipdevices.com">Dip Devices</ExternalLink
+            > and Green Lion Innovations, he continues to drive market innovation
+            with cutting-edge designs.
+          </p>
+        </Profile>
+      </li>
+      <li class="flex flex-col space-y-4">
+        <Profile name="Jeff Dayton" title="Partner" image={jeffDayton}>
+          <p>
+            Jeff Dayton built the investor network at <ExternalLink
+              href="https://www.arcviewgroup.com/"
+              >The Arcview Group</ExternalLink
+            > and is currently the Vice President of Strategy at TRP Co. He is also
+            a Partner at <ExternalLink href="https://dipdevices.com"
+              >Dip Devices</ExternalLink
+            > and Green Lion Innovations. He's been a longtime advocate for drug
+            policy reform and continues to diversify his investments of time and
+            capital across the cannabis, health/wellness, and real estate sectors.
+          </p>
+        </Profile>
+      </li>
+      <li class="flex flex-col space-y-4">
+        <Profile
+          name="John Polinski"
+          title="Web Developer"
+          image={johnPolinski}
+        >
+          <p>
+            John is a skilled web developer with over 10 years of experience in
+            front end technologies. As lead developer and warehouse manager for
+            <ExternalLink href="https://dipdevices.com"
+              >Dip Devices</ExternalLink
+            >, he used his experience in e-commerce to bring modern solutions to
+            inventory management and logistics, and redeveloped the company's
+            website with a modern, responsive design. John is passionate about
+            learning, bringing innovative ideas to life, and finding new ways to
+            solve problems with the latest technology.
+          </p>
+        </Profile>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  /* 
+   * Animate in team member cards when scrolling, 
+   * when using a browser that supports animation-timeline 
+   * and reduced motion is not preferred. 
+   */
+  @supports (animation-timeline: scroll()) {
+    @media (--motionOK) {
+      #team-list ul {
+        opacity: 1;
+        @media (--lg-min) {
+          animation: fade-in forwards;
+          animation-timeline: scroll();
+          animation-range: entry;
+          animation-range: 0 100px;
+        }
+        & > li {
+          animation: item-in-left forwards;
+          animation-timeline: view();
+          animation-range: 0 33%;
+          animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          @media (--lg-min) {
+            animation-range: entry;
+          }
+        }
+        & > li:nth-child(2n) {
+          animation: item-in-right forwards;
+          animation-timeline: view();
+          animation-range: 0 33%;
+          animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          @media (--lg-min) {
+            animation-range: entry;
+          }
+        }
+      }
+    }
+  }
+</style>

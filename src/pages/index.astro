@@ -1,11 +1,75 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+// Home page
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import About from "@/components/sections/about.astro";
+import Companies from "@/components/sections/companies.astro";
+import Contact from "@/components/sections/contact.astro";
+import Hero from "@/components/sections/hero.astro";
+import Mission from "@/components/sections/mission.astro";
+// import Products from "@/components/sections/products.astro";
+// import Services from "@/components/sections/services.astro";
+import Products2 from "@/components/sections/products-2.astro";
+import Team from "@/components/sections/team.astro";
+import Testimonials from "@/components/sections/testimonials.astro";
+import Layout from "../layouts/default.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Home">
+  <section
+    id="intro"
+    class="w-full bg-secondary h-full lg:h-[50vh] 2xl:h-[80vh] pb-16 lg:pb-0"
+  >
+    <Hero />
+  </section>
+  <section id="about">
+    <About />
+  </section>
+  <section id="mission" class="~px-4/8 md:~px-8/24 border-b">
+    <Mission />
+  </section>
+  <section
+    id="products"
+    class="~py-12/24 bg-gradient-to-b from-secondary to-transparent max-w-full"
+  >
+    <!-- <div
+      class="content flex flex-col xl:flex-row ~px-4/8 md:~px-8/24 items-center ~gap-4/8"
+    >
+      <div class="flex-1 ~space-y-8/12 w-full">
+        <h4 class="accent-thruline line-start">Services</h4>
+        <Services />
+      </div>
+      <div
+        class="flex-[2] space-y-8 mt-12 xl:mt-0 flex flex-col items-center xl:items-start"
+      >
+        <h2 class="accent-underline">Products</h2>
+        <Products />
+      </div>
+    </div> -->
+    <Products2 />
+    <div class="content ~space-y-8/12">
+      <h4 class="accent-thruline line-start">Our Clients</h4>
+      <Companies />
+    </div>
+  </section>
+  <section
+    id="testimonials"
+    class="bg-gradient-to-t from-secondary to-transparent border-b relative w-full"
+  >
+    <Testimonials />
+  </section>
+  <section id="team">
+    <Team />
+  </section>
+  <section
+    id="contact"
+    class="bg-gradient-to-b from-transparent to-secondary ~py-12/24"
+  >
+    <Contact />
+  </section>
 </Layout>
+
+<style>
+  #intro {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  }
+</style>

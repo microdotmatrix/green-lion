@@ -1,0 +1,86 @@
+---
+// Company affiliations (partners and advocacy groups) section
+
+import { Image } from "astro:assets";
+
+import arcView from "@/assets/images/affiliates/arcview-group.jpg";
+import cannabisCenter from "@/assets/images/affiliates/cannabis-center.png";
+import dpa from "@/assets/images/affiliates/dpa.png";
+import flowHub from "@/assets/images/affiliates/flowhub.png";
+import gorillaBoost from "@/assets/images/affiliates/gorilla-boost.png";
+import iCan from "@/assets/images/affiliates/ican.png";
+import mpp from "@/assets/images/affiliates/mpp.png";
+import smart from "@/assets/images/affiliates/smart.png";
+import ssdp from "@/assets/images/affiliates/ssdp.jpg";
+---
+
+<div class="content max-w-screen-lg ~py-12/24">
+  <div class="~space-y-8/12 ~pb-12/24">
+    <h4 class="accent-thruline line-end">Partners</h4>
+    <ul id="thumbnails" class="grid grid-cols-2 md:grid-cols-4">
+      <li>
+        <a href="https://www.arcviewgroup.com/" target="_blank">
+          <Image src={arcView} alt="ArcView Group" loading="lazy" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.flowhub.co/" target="_blank">
+          <Image src={flowHub} alt="FlowHub" loading="lazy" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.israel-cannabis.com/" target="_blank">
+          <Image src={iCan} alt="Israel Cannabis" loading="lazy" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.gorillaboost.com/" target="_blank">
+          <Image src={gorillaBoost} alt="Gorilla Boost" loading="lazy" />
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="~space-y-8/12 ~pb-12/24">
+    <h4 class="accent-thruline line-start">Advocacy</h4>
+    <ul id="thumbnails" class="grid grid-cols-2 md:grid-cols-5">
+      <li>
+        <a href="https://www.mpp.org/" target="_blank">
+          <Image src={mpp} alt="Marijuana Policy Project" loading="lazy" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.ssdp.org/" target="_blank">
+          <Image
+            src={ssdp}
+            alt="Students for Sensible Drug Policy"
+            loading="lazy"
+          />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.drugpolicy.org/" target="_blank">
+          <Image src={dpa} alt="Drug Policy Alliance" loading="lazy" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.cannacenterofexcellence.org/" target="_blank">
+          <Image
+            src={cannabisCenter}
+            alt="Cannabis Center of Excellence"
+            loading="lazy"
+          />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.studentmmj.com/" target="_blank">
+          <Image
+            src={smart}
+            alt="Student Marijuana Alliance for Research and Transparency"
+            loading="lazy"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+---
+// Load fonts from local assets and set global css variables
+---
+
+<style is:global>
+  @font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-Variable.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Supreme";
+    src: url("/fonts/Supreme-Variable.woff2") format("woff2");
+  }
+
+  :root {
+    --font-sans: "Supreme", sans-serif;
+    --font-serif: "Montserrat", sans-serif;
+    --font-mono: monospace;
+  }
+</style>

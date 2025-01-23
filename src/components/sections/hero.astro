@@ -1,0 +1,136 @@
+---
+// Hero section
+
+import { Picture } from "astro:assets";
+import background from "@/assets/images/stock-background-02.jpg";
+---
+
+<div id="hero" class="flex flex-wrap justify-between h-full overflow-hidden">
+  <aside
+    class="flex w-full flex-col justify-center lg:w-5/12 order-2 lg:order-1 ~px-1/12 pb-8 pt-12 space-y-4 -mt-36 lg:mt-0 relative z-10"
+  >
+    <h3
+      class="~text-4xl/6xl md:~text-5xl/7xl 2xl:~text-6xl/8xl text-center lg:text-left font-bold bg-secondary ~px-5/8 md:~px-8/10 lg:px-0 max-w-sm md:max-w-lg mx-auto xl:mx-0"
+    >
+      Innovative Solutions
+    </h3>
+
+    <span
+      class="text-center lg:text-right lg:max-w-md leading-tighter text-gray-500 ~text-2xl/4xl font-normal"
+    >
+      Expertly Delivered
+    </span>
+  </aside>
+
+  <figure
+    id="hero-image"
+    class="flex w-full lg:w-7/12 order-1 lg:order-2 overflow-hidden"
+  >
+    <Picture
+      src={background}
+      alt="Green Lion Innovations"
+      formats={["avif", "webp", "jpeg"]}
+      id="scroll-effect"
+      class="h-full w-full object-cover relative z-0"
+    />
+  </figure>
+</div>
+
+<style>
+  #hero {
+    opacity: 1;
+    transition: opacity 500ms ease;
+    @starting-style {
+      opacity: 0;
+    }
+
+    & > aside {
+      opacity: 1;
+      transform: translateX(0px);
+      transition:
+        opacity 300ms ease-in 1000ms,
+        transform 500ms ease 1000ms;
+
+      @starting-style {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+
+      & > h3 {
+        padding-block: 0;
+        @media (--lg-max) {
+          padding-block: 1.5rem 0.5rem;
+          clip-path: polygon(15% 0, 85% 0, 100% 100%, 0 100%);
+        }
+        @media (--3xl-min) {
+          margin-top: -12rem;
+        }
+      }
+      @media (--3xl-min) {
+        & > h3,
+        & > span {
+          margin-left: calc(100% / 4);
+          max-width: 700px;
+        }
+      }
+    }
+
+    & > figure {
+      opacity: 1;
+      will-change: transform;
+
+      transition:
+        opacity 300ms ease-in 1000ms,
+        transform 500ms ease 1000ms,
+        clip-path 1000ms ease-in-out 1000ms;
+
+      @media (--lg-max) {
+        min-block-size: 50vh;
+      }
+
+      @media (--lg-min) {
+        transform: translateX(0px) translateY(0px);
+        clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+        @starting-style {
+          transform: translateX(100px) translateY(0px);
+          clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+      }
+      @starting-style {
+        opacity: 0;
+      }
+    }
+  }
+</style>
+
+<script is:inline>
+  /**
+   * @param {{ (): void; (): void; }} fn
+   * @param {number} wait
+   */
+  function throttle(fn, wait) {
+    let time = Date.now();
+    return function () {
+      if (time + wait - Date.now() < 0) {
+        fn();
+        time = Date.now();
+      }
+    };
+  }
+
+  function prefersReducedMotion() {
+    return window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
+  }
+
+  function parallax() {
+    let scrolled = window.scrollY;
+    let parallax = document.querySelector("#scroll-effect");
+
+    let coords = scrolled * 0.4 + "px";
+    parallax.style.transform = "translateY(" + coords + ")";
+  }
+
+  if (prefersReducedMotion()) {
+    window.addEventListener("scroll", throttle(parallax, 13));
+  }
+</script>

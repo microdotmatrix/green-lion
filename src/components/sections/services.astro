@@ -1,0 +1,45 @@
+---
+// List of primary company services section
+
+import {
+  Battery,
+  Design,
+  Factory,
+  LaserTool,
+  Manufacturing,
+  Package,
+  Precision,
+} from "@/components/icons";
+---
+
+<ul id="services" class="~text-xl/4xl xl:~text-xl/2xl">
+  <li><LaserTool /> <span>CNC</span></li>
+  <li><Precision /> <span>High-volume silicone & injection molding</span></li>
+  <li><Battery /> <span>PCBs/Batteries</span></li>
+  <li><Design /> <span>Design for Manufacturing</span></li>
+  <li><Factory /> <span>Mold Manufacturing</span></li>
+  <li><Package /> <span>Packaging</span></li>
+  <li><Manufacturing /> <span>International Assembly</span></li>
+</ul>
+
+<style>
+  :where(#services) {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: fit-content;
+    margin-inline: auto;
+    & > li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      & > span {
+        @apply text-muted-foreground;
+      }
+      & > svg {
+        filter: drop-shadow(0 0 3px hsl(var(--primary) / 0.8));
+      }
+    }
+  }
+</style>

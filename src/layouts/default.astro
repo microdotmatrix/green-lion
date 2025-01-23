@@ -1,0 +1,30 @@
+---
+import "@/styles/global.css";
+
+import ScrollUp from "@/components/elements/scroll-up.astro";
+import Footer from "@/components/layout/footer.astro";
+import Header from "@/components/layout/header.astro";
+import Meta from "@/components/layout/meta.astro";
+
+import { SITE } from "@/lib/config";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = SITE.desc } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <Meta title={`${title} | ${SITE.title}`} description={description} />
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <ScrollUp />
+  </body>
+</html>
