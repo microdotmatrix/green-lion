@@ -6,10 +6,9 @@ import Companies from "@/components/sections/companies.astro";
 import Contact from "@/components/sections/contact.astro";
 import Hero from "@/components/sections/hero.astro";
 import Mission from "@/components/sections/mission.astro";
-// import Products from "@/components/sections/products.astro";
+import Products from "@/components/sections/products.astro";
 // import Services from "@/components/sections/services.astro";
 import Products2 from "@/components/sections/products-2.astro";
-import Team from "@/components/sections/team.astro";
 import Testimonials from "@/components/sections/testimonials.astro";
 import Layout from "../layouts/default.astro";
 ---
@@ -47,6 +46,10 @@ import Layout from "../layouts/default.astro";
     </div> -->
     <Products2 />
     <div class="content ~space-y-8/12">
+      <h4 class="accent-thruline line-end">Our Products</h4>
+      <Products />
+    </div>
+    <div class="content ~space-y-8/12">
       <h4 class="accent-thruline line-start">Our Clients</h4>
       <Companies />
     </div>
@@ -57,9 +60,9 @@ import Layout from "../layouts/default.astro";
   >
     <Testimonials />
   </section>
-  <section id="team">
+  <!-- <section id="team">
     <Team />
-  </section>
+  </section> -->
   <section
     id="contact"
     class="bg-gradient-to-b from-transparent to-secondary ~py-12/24"
