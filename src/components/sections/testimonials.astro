@@ -17,7 +17,13 @@ import { ArrowLeft, ArrowRight } from "@/components/icons";
           distributor and in turn made us more competitive in the market.
         </p>
         <footer class="text-muted-foreground">
-          <cite>Chris Piazza, CannaDevices</cite>
+          <cite
+            >Chris Piazza, <a
+              href="https://cannadevices.com/"
+              target="_blank"
+              class="text-primary hover:underline">CannaDevices</a
+            ></cite
+          >
         </footer>
       </blockquote>
       <blockquote class="carousel-slide">
@@ -170,16 +176,33 @@ import { ArrowLeft, ArrowRight } from "@/components/icons";
     if (!prevButton || !nextButton) return;
 
     let currentIndex = 0;
+    let autoplayInterval: number | undefined;
 
     function scrollToSlide(index: number) {
-      // Instead of scrollIntoView, we'll manually set scrollLeft
       // @ts-ignore
       const slideWidth = track.offsetWidth;
-      // @ts-ignore
-      track.scrollTo({
+      track?.scrollTo({
         left: slideWidth * index,
         behavior: "smooth",
       });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      scrollToSlide(currentIndex);
+    }
+
+    function startAutoplay() {
+      if (!autoplayInterval) {
+        autoplayInterval = setInterval(nextSlide, 7000);
+      }
+    }
+
+    function stopAutoplay() {
+      if (autoplayInterval) {
+        clearInterval(autoplayInterval);
+        autoplayInterval = undefined;
+      }
     }
 
     prevButton.addEventListener("click", () => {
@@ -192,12 +215,19 @@ import { ArrowLeft, ArrowRight } from "@/components/icons";
       scrollToSlide(currentIndex);
     });
 
+    // Pause autoplay on hover
+    track.addEventListener("mouseenter", stopAutoplay);
+    track.addEventListener("mouseleave", startAutoplay);
+
     // Optional: Update currentIndex when scrolling manually
     track.addEventListener("scroll", () => {
       // @ts-ignore
       const slideWidth = track.offsetWidth;
       currentIndex = Math.round(track.scrollLeft / slideWidth);
     });
+
+    // Start autoplay initially
+    startAutoplay();
   }
 
   // Initialize carousel when the DOM is loaded
