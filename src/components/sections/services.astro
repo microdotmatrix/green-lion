@@ -1,5 +1,10 @@
 ---
-// List of primary company services section
+import img01 from "@/assets/images/production-01.png";
+import img02 from "@/assets/images/production-02.png";
+import img03 from "@/assets/images/production-03.jpg";
+import img04 from "@/assets/images/production-04.jpg";
+import img05 from "@/assets/images/production-05.jpg";
+import { Image } from "astro:assets";
 
 import {
   Battery,
@@ -12,15 +17,153 @@ import {
 } from "@/components/icons";
 ---
 
-<ul id="services" class="~text-xl/4xl xl:~text-xl/2xl">
-  <li><LaserTool /> <span>CNC</span></li>
-  <li><Precision /> <span>High-volume silicone & injection molding</span></li>
-  <li><Battery /> <span>PCBs/Batteries</span></li>
-  <li><Design /> <span>Design for Manufacturing</span></li>
-  <li><Factory /> <span>Mold Manufacturing</span></li>
-  <li><Package /> <span>Packaging</span></li>
-  <li><Manufacturing /> <span>International Assembly</span></li>
-</ul>
+<div id="products-grid-2">
+  <div class="relative isolate">
+    <svg
+      class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-foreground/10 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
+      aria-hidden="true"
+    >
+      <defs>
+        <pattern
+          id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84"
+          width="200"
+          height="200"
+          x="50%"
+          y="-1"
+          patternUnits="userSpaceOnUse"
+        >
+          <path d="M.5 200V.5H200" fill="none"></path>
+        </pattern>
+      </defs>
+      <svg x="50%" y="-1" class="overflow-visible fill-foreground/10">
+        <path
+          d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
+          stroke-width="0"></path>
+      </svg>
+      <rect
+        width="100%"
+        height="100%"
+        stroke-width="0"
+        fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)"></rect>
+    </svg>
+    <div
+      class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
+      aria-hidden="true"
+    >
+      <div
+        class="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+        style="clip-path: polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)"
+      >
+      </div>
+    </div>
+    <div class="overflow-hidden">
+      <div class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
+        <div
+          class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center"
+        >
+          <div class="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
+            <h2
+              class="text-pretty font-semibold tracking-tight ~mb-8/12 accent-underline"
+            >
+              Our Services
+            </h2>
+            <ul id="services" class="~text-xl/4xl xl:~text-xl/2xl">
+              <li><LaserTool /> <span>CNC</span></li>
+              <li>
+                <Precision />
+                <span>High-volume silicone & injection molding</span>
+              </li>
+              <li><Battery /> <span>PCBs/Batteries</span></li>
+              <li><Design /> <span>Design for Manufacturing</span></li>
+              <li><Factory /> <span>Mold Manufacturing</span></li>
+              <li><Package /> <span>Packaging</span></li>
+              <li><Manufacturing /> <span>International Assembly</span></li>
+            </ul>
+          </div>
+          <div
+            class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0"
+          >
+            <div
+              class="ml-auto ~w-44/64 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80"
+            >
+              <div
+                class="relative scale-100 hover:scale-105 transition-all duration-300"
+              >
+                <Image
+                  src={img01}
+                  alt=""
+                  class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                />
+                <div
+                  class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
+                >
+                </div>
+              </div>
+            </div>
+            <div
+              class="mr-auto ~w-44/64 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36"
+            >
+              <div
+                class="relative scale-100 hover:scale-105 transition-all duration-300"
+              >
+                <Image
+                  src={img02}
+                  alt=""
+                  class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                />
+                <div
+                  class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
+                >
+                </div>
+              </div>
+              <div
+                class="relative scale-100 hover:scale-105 transition-all duration-300"
+              >
+                <Image
+                  src={img03}
+                  alt=""
+                  class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                />
+                <div
+                  class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
+                >
+                </div>
+              </div>
+            </div>
+            <div class="~w-44/64 flex-none space-y-8 pt-32 sm:pt-0">
+              <div
+                class="relative scale-100 hover:scale-105 transition-all duration-300"
+              >
+                <Image
+                  src={img04}
+                  alt=""
+                  class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                />
+                <div
+                  class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
+                >
+                </div>
+              </div>
+              <div
+                class="relative scale-100 hover:scale-105 transition-all duration-300"
+              >
+                <Image
+                  src={img05}
+                  alt=""
+                  class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                />
+                <div
+                  class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"
+                >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <style>
   :where(#services) {
