@@ -67,7 +67,7 @@ import {
             >
               Our Services
             </h2>
-            <ul id="services" class="~text-xl/4xl xl:~text-xl/2xl">
+            <ul id="services" class="~text-xl/3xl text-balance">
               <li><LaserTool /> <span>CNC</span></li>
               <li>
                 <Precision />
@@ -170,7 +170,7 @@ import {
     text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
     width: fit-content;
     margin-inline: auto;
     & > li {
@@ -181,6 +181,7 @@ import {
         @apply text-muted-foreground;
       }
       & > svg {
+        @apply ~text-3xl/4xl;
         filter: drop-shadow(0 0 3px hsl(var(--primary) / 0.8));
       }
     }
