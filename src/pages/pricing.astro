@@ -1,0 +1,11 @@
+---
+import PricingTool from "@/components/sections/pricing-tool.tsx";
+import Layout from "@/layouts/default.astro";
+---
+
+<Layout title="Pricing Tool">
+  <section class="content w-full">
+    <h4 class="accent-underline mx-auto">Pricing Tool</h4>
+    <PricingTool client:load />
+  </section>
+</Layout>
