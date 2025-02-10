@@ -143,7 +143,8 @@ const PricingTool = () => {
     }
   };
 
-  const submitForm = async () => {
+  const submitForm = async (e: SubmitEvent) => {
+    e.preventDefault();
     if (email) {
       const payload = {
         timestamp: new Date().toISOString(),
@@ -156,7 +157,7 @@ const PricingTool = () => {
       };
 
       try {
-        await fetch('/api/zapier/submit', {
+        await fetch('/api/email', {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -337,7 +338,7 @@ const PricingTool = () => {
               volume discounts, and more, please provide your email address and
               we'll reach out to you!
             </p>
-            <div className="space-y-4">
+            <form onSubmit={(e) => submitForm(e)} className="space-y-4">
               <Input
                 type="email"
                 placeholder="Enter your email"
@@ -347,12 +348,12 @@ const PricingTool = () => {
                 required
               />
               <Button
-                onClick={submitForm}
+                type="submit"
                 className="w-full bg-primary hover:bg-primary/90 font-serif uppercase text-white ~text-lg/2xl ~py-4/6"
               >
                 Submit
               </Button>
-            </div>
+            </form>
           </CardContent>
         </Card>
       )}
