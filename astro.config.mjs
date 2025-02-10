@@ -16,7 +16,7 @@ export default defineConfig({
   output: "server",
   env: {
     schema: {
-      ZAPIER_WEBHOOK_URL: envField.string({ context: "server", access: "secret" }),
+      ZAPIER_WEBHOOK_URL: envField.string({ context: "server", access: "public" }),
       PUBLIC_ZAPIER_WEBHOOK_URL: envField.string({ context: "client", access: "public" }),
     }
   }
