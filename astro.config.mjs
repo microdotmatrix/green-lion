@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, envField } from "astro/config";
 
 import tailwind from "@astrojs/tailwind";
 
@@ -13,4 +13,11 @@ export default defineConfig({
     applyBaseStyles: false,
   }), react()],
   adapter: netlify(),
+  output: "server",
+  env: {
+    schema: {
+      ZAPIER_WEBHOOK_URL: envField.string({ context: "server", access: "secret" }),
+      PUBLIC_ZAPIER_WEBHOOK_URL: envField.string({ context: "client", access: "public" }),
+    }
+  }
 });

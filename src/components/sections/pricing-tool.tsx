@@ -155,18 +155,31 @@ const PricingTool = () => {
         email: email,
       };
 
-      console.log("Submitting to Zapier:", payload);
-
       try {
-        await fetch("https://hooks.zapier.com/hooks/catch/21283097/2fwcqgj/", {
+        await fetch('/api/zapier/submit', {
           method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
           body: JSON.stringify(payload),
         });
-
-        console.log("Webhook submission attempted");
       } catch (error) {
-        console.error("Submission error:", error);
+        console.error("Failed to submit to Zapier:", error);
       }
+
+      // console.log("Submitting to Zapier:", payload);
+
+      // try {
+      //   await fetch(import.meta.env.PUBLIC_ZAPIER_WEBHOOK_URL, {
+      //     method: "POST",
+      //     body: JSON.stringify(payload),
+      //   });
+
+      //   console.log("Webhook submission attempted");
+      // } catch (error) {
+      //   console.error("Submission error:", error);
+      // }
+
 
       setShowThankYou(true);
     }
