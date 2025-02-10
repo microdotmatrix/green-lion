@@ -143,7 +143,7 @@ const PricingTool = () => {
     }
   };
 
-  const submitForm = async (e: SubmitEvent) => {
+  const submitForm = async (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
       const payload = {
@@ -165,22 +165,8 @@ const PricingTool = () => {
           body: JSON.stringify(payload),
         });
       } catch (error) {
-        console.error("Failed to submit to Zapier:", error);
+        console.error("Email submission failed:", error);
       }
-
-      // console.log("Submitting to Zapier:", payload);
-
-      // try {
-      //   await fetch(import.meta.env.PUBLIC_ZAPIER_WEBHOOK_URL, {
-      //     method: "POST",
-      //     body: JSON.stringify(payload),
-      //   });
-
-      //   console.log("Webhook submission attempted");
-      // } catch (error) {
-      //   console.error("Submission error:", error);
-      // }
-
 
       setShowThankYou(true);
     }
