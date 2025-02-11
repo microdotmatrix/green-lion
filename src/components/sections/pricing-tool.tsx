@@ -272,15 +272,9 @@ const PricingTool = () => {
           </CardHeader>
           <CardContent>
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <figure className="overflow-clip text-center w-full md:w-80">
-                <img
-                  src={selectedProduct.image}
-                  alt={selectedProduct.description}
-                  width={420}
-                  height={420}
-                  className="object-contain w-full sm:w-2/3 md:w-full mx-auto h-80 bg-accent text-muted text-xs"
-                />
-              </figure>
+              {selectedProduct.image && (
+                <ProductImage selectedProduct={selectedProduct} />
+              )}
               <div className="space-y-2 flex-1 [&>p]:~text-lg/2xl">
                 <p>
                   <strong>SKU:</strong> {selectedProduct.sku}
@@ -346,5 +340,19 @@ const PricingTool = () => {
     </div>
   );
 };
+
+const ProductImage = ({ selectedProduct }) => {
+  return (
+    <figure className="overflow-clip text-center w-full md:w-80">
+      <img
+        src={selectedProduct.image}
+        alt={selectedProduct.description}
+        width={420}
+        height={420}
+        className="object-contain w-full sm:w-2/3 md:w-full mx-auto h-80 bg-accent text-muted text-xs"
+      />
+    </figure>
+  )
+}
 
 export default PricingTool;

@@ -44,4 +44,8 @@ export const initialPricingData = {
     pricing: { "1-99": 5, "100-999": 34, "1000-9999": 12, "10000+": 34 },
     image: "https://dipdevices.com/cdn/shop/files/ROVER-White_d95793d5-2ed3-4f43-bcba-dd0319be485c.png?v=1694038326&width=420"
   },
+  "100300": {
+    description: "Fake Product",
+    pricing: { "1-99": 5, "100-999": 34, "1000-9999": 12, "10000+": 34 },
+  }
 };
