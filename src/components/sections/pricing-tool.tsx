@@ -2,14 +2,20 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { initialPricingData } from "@/lib/pricing";
-import { useEffect, useState } from "react";
+import { pricingData } from "@/lib/pricing";
+import { useState } from "react";
 
-const MAX_RETRIES = 3;
-const RETRY_DELAY = 1000; // 1 second
+type PricingProps = {
+  sku: string;
+  quantity: number;
+  name: string;
+  description: string;
+  price: number;
+  totalPrice: number;
+  image: string;
+};
 
 const PricingTool = () => {
-  const [pricingData, setPricingData] = useState(initialPricingData);
   const [sku, setSku] = useState("");
   const [quantity, setQuantity] = useState("");
   const [email, setEmail] = useState("");
@@ -20,23 +26,18 @@ const PricingTool = () => {
     message: "",
     type: "info",
   });
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState<PricingProps | null>(
+    null,
+  );
   const [showThankYou, setShowThankYou] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-  const [retryCount, setRetryCount] = useState(0);
 
   const clearAlert = () => {
     setAlert({ show: false, message: "", type: "info" });
   };
 
-  // Remove loadPricingData since we're using initial data
-  useEffect(() => {
-    console.log("Available SKUs:", Object.keys(pricingData));
-  }, [pricingData]);
-
   const validateSku = (sku: string) => {
     const skuString = sku.toString();
-    return skuString.length === 6 && !isNaN(skuString);
+    return skuString.length >= 9;
   };
 
   const validateQuantity = (qty: string) => {
@@ -46,22 +47,24 @@ const PricingTool = () => {
 
   const getPrice = (
     quantity: string,
-    pricingTiers: { [x: string]: string }
+    pricingTiers: { [x: string]: string },
   ) => {
     const qty = parseInt(quantity);
     if (!qty || qty <= 0) return null;
 
     const prices = {
-      "1-99": parseFloat(pricingTiers["1-99"]),
-      "100-999": parseFloat(pricingTiers["100-999"]),
-      "1000-9999": parseFloat(pricingTiers["1000-9999"]),
-      "10000+": parseFloat(pricingTiers["10000+"]),
+      "10,000-24,999": parseFloat(pricingTiers["10,000-24,999"]),
+      "25,000-49,999": parseFloat(pricingTiers["25,000-49,999"]),
+      "50,000-99,999": parseFloat(pricingTiers["50,000-99,999"]),
+      "100,000-199,999": parseFloat(pricingTiers["100,000-199,999"]),
+      "200,000+": parseFloat(pricingTiers["200,000+"]),
     };
 
-    if (qty >= 10000) return prices["10000+"];
-    if (qty >= 1000) return prices["1000-9999"];
-    if (qty >= 100) return prices["100-999"];
-    return prices["1-99"];
+    if (qty >= 200000) return prices["200,000+"];
+    if (qty >= 100000) return prices["100,000-199,999"];
+    if (qty >= 50000) return prices["50,000-99,999"];
+    if (qty >= 25000) return prices["25,000-49,999"];
+    return prices["10,000-24,999"];
   };
 
   const handleSearch = (e: React.FormEvent) => {
@@ -81,7 +84,7 @@ const PricingTool = () => {
     if (!validateSku(sku)) {
       setAlert({
         show: true,
-        message: "Please enter a valid 6-digit SKU",
+        message: "Please enter a valid SKU",
         type: "error",
       });
       return;
@@ -121,7 +124,8 @@ const PricingTool = () => {
     const totalPrice = price * parseInt(quantity);
     setSelectedProduct({
       sku: searchSku,
-      description: product.description,
+      name: product.name,
+      description: product.description || "",
       image: product.image,
       quantity: parseInt(quantity),
       price,
@@ -145,19 +149,21 @@ const PricingTool = () => {
 
   const submitForm = async (e: React.FormEvent) => {
     e.preventDefault();
+
     if (email) {
       const payload = {
         timestamp: new Date().toISOString(),
-        sku: selectedProduct.sku,
-        description: selectedProduct.description,
-        quantity: selectedProduct.quantity,
-        unit_price: selectedProduct.price,
-        total_price: selectedProduct.totalPrice,
+        sku: selectedProduct?.sku,
+        name: selectedProduct?.name,
+        description: selectedProduct?.description,
+        quantity: selectedProduct?.quantity,
+        unit_price: selectedProduct?.price,
+        total_price: selectedProduct?.totalPrice,
         email: email,
       };
 
       try {
-        await fetch('/api/email', {
+        await fetch("/api/email", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -167,7 +173,6 @@ const PricingTool = () => {
       } catch (error) {
         console.error("Email submission failed:", error);
       }
-
       setShowThankYou(true);
     }
   };
@@ -219,7 +224,7 @@ const PricingTool = () => {
                   clearAlert();
                 }}
                 className="bg-accent border-border focus:border-primary"
-                maxLength={6}
+                maxLength={9}
               />
               <Input
                 placeholder="Enter Quantity"
@@ -234,7 +239,6 @@ const PricingTool = () => {
               />
             </div>
             <div className="w-full mx-auto mr-0 flex flex-row gap-4">
-              
               <Button
                 type="submit"
                 className="w-full bg-primary hover:bg-primary/90 font-serif uppercase text-white ~text-base/2xl ~py-4/6"
@@ -260,7 +264,11 @@ const PricingTool = () => {
       </Card>
 
       {alert.show && (
-        <Alert className={alert.type === "error" ? "bg-destructive" : "bg-primary/50"}>
+        <Alert
+          className={
+            alert.type === "error" ? "bg-destructive" : "bg-primary/50"
+          }
+        >
           <AlertDescription>{alert.message}</AlertDescription>
         </Alert>
       )}
@@ -268,39 +276,47 @@ const PricingTool = () => {
       {selectedProduct && (
         <Card className="bg-secondary/50">
           <CardHeader className="border-b border-border mb-4">
-            <CardTitle className="text-foreground font-serif">Price Quote</CardTitle>
+            <CardTitle className="text-foreground font-serif">
+              Price Quote
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               {selectedProduct.image && (
                 <ProductImage selectedProduct={selectedProduct} />
               )}
-              <div className="space-y-2 flex-1 [&>p]:~text-lg/2xl">
-                <p>
-                  <strong>SKU:</strong> {selectedProduct.sku}
-                </p>
-                <p>
-                  <strong>Description:</strong> {selectedProduct.description}
-                </p>
-                <p>
-                  <strong>Quantity:</strong>{" "}
-                  {selectedProduct.quantity.toLocaleString()}
-                </p>
-                <p>
-                  <strong>Unit Price:</strong> ${selectedProduct.price.toFixed(2)}
-                </p>
-                <p className="text-primary">
-                  <strong>Total Price:</strong> $
-                  {selectedProduct.totalPrice.toLocaleString(undefined, {
-                    minimumFractionDigits: 2,
-                    maximumFractionDigits: 2,
-                  })}
-                </p>
-                <p className="pt-6" style={{ lineHeight: "0.75rem" }}>
-                  <span className="text-xs">
-                    Price quotes are estimates and may vary with order specifics.
-                  </span>
-                </p>
+              <div className="space-y-8 flex-1">
+                <div className="space-y-2 [&>p]:~text-lg/2xl">
+                  <p>
+                    <strong>SKU:</strong> {selectedProduct.sku}
+                  </p>
+                  <p>
+                    <strong>Name:</strong> {selectedProduct.name}
+                  </p>
+                  <p>
+                    <strong>Quantity:</strong>{" "}
+                    {selectedProduct.quantity.toLocaleString()}
+                  </p>
+                  <p>
+                    <strong>Unit Price:</strong> $
+                    {selectedProduct.price.toLocaleString()}
+                  </p>
+                  <p className="text-primary">
+                    <strong>Total Price:</strong> $
+                    {selectedProduct.totalPrice.toLocaleString(undefined, {
+                      minimumFractionDigits: 2,
+                      maximumFractionDigits: 2,
+                    })}
+                  </p>
+                </div>
+                {selectedProduct.description && (
+                  <p className="~text-sm/lg">
+                    <strong>Description:</strong> {selectedProduct.description}
+                  </p>
+                )}
+                <div className="~text-xs/sm text-muted-foreground border-t mt-8 py-4 w-fit">
+                  Price quotes are estimates and may vary with order specifics.
+                </div>
               </div>
             </div>
           </CardContent>
@@ -341,18 +357,22 @@ const PricingTool = () => {
   );
 };
 
-const ProductImage = ({ selectedProduct }) => {
+const ProductImage = ({
+  selectedProduct,
+}: {
+  selectedProduct: PricingProps;
+}) => {
   return (
-    <figure className="overflow-clip text-center w-full md:w-80">
+    <figure className="overflow-clip text-center w-full md:w-80 p-4 bg-accent">
       <img
         src={selectedProduct.image}
-        alt={selectedProduct.description}
+        alt={selectedProduct.name || ""}
         width={420}
         height={420}
-        className="object-contain w-full sm:w-2/3 md:w-full mx-auto h-80 bg-accent text-muted text-xs"
+        className="object-cover w-full sm:w-2/3 md:w-full mx-auto h-80 text-muted-foreground content-center text-xs"
       />
     </figure>
-  )
-}
+  );
+};
 
 export default PricingTool;
