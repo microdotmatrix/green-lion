@@ -37,7 +37,7 @@ const PricingTool = () => {
 
   const validateSku = (sku: string) => {
     const skuString = sku.toString();
-    return skuString.length >= 9;
+    return skuString.length === 9;
   };
 
   const validateQuantity = (qty: string) => {
@@ -84,7 +84,8 @@ const PricingTool = () => {
     if (!validateSku(sku)) {
       setAlert({
         show: true,
-        message: "Please enter a valid SKU",
+        message:
+          "Please enter a valid SKU - must be 9 characters (e.g. GLIC-1001)",
         type: "error",
       });
       return;
