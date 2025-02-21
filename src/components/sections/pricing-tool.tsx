@@ -106,7 +106,8 @@ const PricingTool = () => {
     if (!product) {
       setAlert({
         show: true,
-        message: "SKU not found",
+        message:
+          "SKU not found - please verify correct format (e.g. GLIC-1001)",
         type: "error",
       });
       return;

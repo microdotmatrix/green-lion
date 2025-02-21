@@ -19,7 +19,8 @@ interface FormData {
 export const POST: APIRoute = async ({ request }) => {
   try {
     const data = (await request.json()) as FormData;
-    const { sku, description, quantity, unit_price, total_price, email } = data;
+    const { sku, name, description, quantity, unit_price, total_price, email } =
+      data;
 
     const emailResponse = await resend.emails.send({
       from: "Green Lion <no-reply@greenlioninnovations.com>",
