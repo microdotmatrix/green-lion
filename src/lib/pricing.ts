@@ -112,11 +112,11 @@ export const pricingData = {
     description:
       "A high-capacity 2mL cartridge featuring a stainless steel post and ceramic heating core, ensuring efficient oil absorption and even heat distribution.",
     pricing: {
-      "10,000-24,999": null,
-      "25,000-49,999": null,
-      "50,000-99,999": null,
-      "100,000-199,999": null,
-      "200,000+": null,
+      "10,000-24,999": 1.24,
+      "25,000-49,999": 1.24,
+      "50,000-99,999": 1.19,
+      "100,000-199,999": 1.15,
+      "200,000+": 1.1,
     },
   },
   "GLIC-6001": {
