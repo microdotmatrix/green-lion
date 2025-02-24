@@ -2,6 +2,7 @@
 import "@/styles/global.css";
 
 import ScrollUp from "@/components/elements/scroll-up.astro";
+import { TailwindIndicator } from "@/components/elements/tailwind-indicator.tsx";
 import Footer from "@/components/layout/footer.astro";
 import Header from "@/components/layout/header.astro";
 import Meta from "@/components/layout/meta.astro";
@@ -26,5 +27,6 @@ const { title, description = SITE.desc } = Astro.props;
     </main>
     <Footer />
     <ScrollUp />
+    <TailwindIndicator />
   </body>
 </html>

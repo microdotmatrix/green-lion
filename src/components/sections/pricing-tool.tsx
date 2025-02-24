@@ -292,9 +292,9 @@ const PricingTool = () => {
                   <p>
                     <strong>SKU:</strong> {selectedProduct.sku}
                   </p>
-                  <p>
+                  {/* <p>
                     <strong>Name:</strong> {selectedProduct.name}
-                  </p>
+                  </p> */}
                   <p>
                     <strong>Quantity:</strong>{" "}
                     {selectedProduct.quantity.toLocaleString()}
@@ -317,7 +317,10 @@ const PricingTool = () => {
                   </p>
                 )}
                 <div className="~text-xs/sm text-muted-foreground border-t mt-8 py-4 w-fit">
-                  Price quotes are estimates and may vary with order specifics.
+                  Pricing is an estimate and subject to change based on design,
+                  customization, and order specifics. Estimate includes shipping
+                  and import fees for a one-color unit with a one-color
+                  silkscreen logo but may vary at the time of order.
                 </div>
               </div>
             </div>
