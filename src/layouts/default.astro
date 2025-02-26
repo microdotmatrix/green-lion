@@ -27,6 +27,6 @@ const { title, description = SITE.desc } = Astro.props;
     </main>
     <Footer />
     <ScrollUp />
-    <TailwindIndicator />
+    {import.meta.env.DEV && <TailwindIndicator client:load />}
   </body>
 </html>

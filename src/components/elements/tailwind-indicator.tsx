@@ -1,6 +1,4 @@
 export function TailwindIndicator() {
-  if (import.meta.env.PROD) return null;
-
   return (
     <div
       data-tailwind-indicator=""
