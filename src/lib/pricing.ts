@@ -1,5 +1,5 @@
 export const pricingData = {
-  "GLIB-3001": {
+  "GLIB-0301": {
     name: "350 mAh Slim",
     description:
       "350 mAh Slim 510 battery. Reliable, true to capacity battery, USBC Charge",
@@ -11,7 +11,7 @@ export const pricingData = {
       "200,000+": 2.8,
     },
   },
-  "GLIB-3002": {
+  "GLIB-0302": {
     name: "LCD 510 Thread Battery (12mm)",
     description:
       "Reliable USB-C charging 510 battery—now with an LCD screen for precise voltage control and battery monitoring. The 12mm is ideal for standard 510 carts, while the 14mm offers a more robust fit for larger capacity carts. The 16mm stands out with its advanced LCD display.",
@@ -23,7 +23,7 @@ export const pricingData = {
       "200,000+": 3.25,
     },
   },
-  "GLIB-3003": {
+  "GLIB-0303": {
     name: "LCD 510 Thread Battery (14mm)",
     description:
       "Reliable USB-C charging 510 battery—now with an LCD screen for precise voltage control and battery monitoring. The 12mm is ideal for standard 510 carts, while the 14mm offers a more robust fit for larger capacity carts. The 16mm stands out with its advanced LCD display.",
@@ -35,7 +35,7 @@ export const pricingData = {
       "200,000+": 3.25,
     },
   },
-  "GLIB-3004": {
+  "GLIB-0304": {
     name: "LCD 510 Thread Battery (16mm)",
     description:
       "Reliable USB-C charging 510 battery—now with an LCD screen for precise voltage control and battery monitoring. The 12mm is ideal for standard 510 carts, while the 14mm offers a more robust fit for larger capacity carts. The 16mm stands out with its advanced LCD display.",
@@ -47,7 +47,7 @@ export const pricingData = {
       "200,000+": 3.75,
     },
   },
-  "GLIB-3005": {
+  "GLIB-0305": {
     name: '"Hide" 510 Cartridge Battery',
     description:
       "Stealthy 510 Cover protects your cartridge and keeps your consumption discreet! Affordable, brandable, and with rapid USB-C charging capabilities!",
@@ -59,7 +59,7 @@ export const pricingData = {
       "200,000+": 5.65,
     },
   },
-  "GLIC-1001": {
+  "GLIC-0101": {
     name: "Ceramic Cart with Glass Tank 0.5 mL",
     description:
       "A patented ceramic design with faster heating, a larger contact surface area, and cotton-free construction for consistent vapor and no dry burns.",
@@ -71,7 +71,7 @@ export const pricingData = {
       "200,000+": 1.32,
     },
   },
-  "GLIC-1002": {
+  "GLIC-0102": {
     name: "Ceramic Cart with Glass Tank 1 mL",
     description:
       "A patented ceramic design with faster heating, a larger contact surface area, and cotton-free construction for consistent vapor and no dry burns.",
@@ -83,7 +83,7 @@ export const pricingData = {
       "200,000+": 1.39,
     },
   },
-  "GLIC-4001": {
+  "GLIC-0401": {
     name: "Ceramic Core with Glass Tank 0.5 mL",
     description:
       "Designed for smooth, consistent vaporization, this cartridge features a ceramic heating element and Pyrex glass housing for pure flavor retention.",
@@ -95,7 +95,7 @@ export const pricingData = {
       "200,000+": 0.88,
     },
   },
-  "GLIC-4002": {
+  "GLIC-0402": {
     name: "Ceramic Core with Glass Tank 1 mL",
     description:
       "Designed for smooth, consistent vaporization, this cartridge features a ceramic heating element and Pyrex glass housing for pure flavor retention.",
@@ -107,7 +107,7 @@ export const pricingData = {
       "200,000+": 0.88,
     },
   },
-  "GLIC-4003": {
+  "GLIC-0403": {
     name: "Ceramic Core with Glass Tank 2 mL",
     description:
       "A high-capacity 2mL cartridge featuring a stainless steel post and ceramic heating core, ensuring efficient oil absorption and even heat distribution.",
@@ -119,7 +119,7 @@ export const pricingData = {
       "200,000+": 1.2,
     },
   },
-  "GLIC-6001": {
+  "GLIC-0601": {
     name: "Ceramic Core with Glass Tank 3 mL",
     description:
       "A high-capacity 3mL cartridge featuring a titanium steel post and ceramic heating core, ensuring efficient oil absorption and even heat distribution.",
@@ -131,7 +131,7 @@ export const pricingData = {
       "200,000+": 1.39,
     },
   },
-  "GLID-1001": {
+  "GLID-0101": {
     name: "Ceramic Disposable 0.3 mL",
     description:
       "A minimalist, inhale-activated disposable featuring a ceramic heating core and glass tank for clean, flavorful vapor. Its compact size and USB-C charging make it a perfect discreet option.",
@@ -143,7 +143,7 @@ export const pricingData = {
       "200,000+": 2.39,
     },
   },
-  "GLID-1002": {
+  "GLID-0102": {
     name: "Ceramic Disposable 1 mL ",
     description:
       "A high-capacity, inhale-activated ceramic disposable with a 400mAh battery, glass tank, and USB-C charging. Designed for longer sessions and consistent performance.",
@@ -155,7 +155,7 @@ export const pricingData = {
       "200,000+": 3.43,
     },
   },
-  "GLID-1003": {
+  "GLID-0103": {
     name: "Ceramic Disposable 2 mL",
     description:
       "A high-capacity, inhale-activated ceramic disposable with a 400mAh battery, glass tank, and USB-C charging. Designed for longer sessions and consistent performance.",
@@ -167,7 +167,7 @@ export const pricingData = {
       "200,000+": 3.43,
     },
   },
-  "GLID-1004": {
+  "GLID-0104": {
     name: "Postless 0.5 mL breath activated ",
     description:
       "A sleek, postless design with inhale activation for effortless vaping. Featuring a ceramic heating core and USB-C charging for consistent performance across various oils.",
@@ -179,7 +179,7 @@ export const pricingData = {
       "200,000+": 2.58,
     },
   },
-  "GLID-1005": {
+  "GLID-0105": {
     name: "Postless 1.0 mL breath activated ",
     description:
       "A sleek, postless design with inhale activation for effortless vaping. Featuring a ceramic heating core and USB-C charging for consistent performance across various oils.",
@@ -191,7 +191,7 @@ export const pricingData = {
       "200,000+": 2.58,
     },
   },
-  "GLID-1006": {
+  "GLID-0106": {
     name: "Postless 0.5 mL button activated ",
     description:
       "Combining button activation with a premium ceramic core, this postless disposable delivers precision control and a customizable vaping experience.",
@@ -203,7 +203,7 @@ export const pricingData = {
       "200,000+": 2.76,
     },
   },
-  "GLID-1007": {
+  "GLID-0107": {
     name: "Postless 1.0 mL button activated ",
     description:
       "Combining button activation with a premium ceramic core, this postless disposable delivers precision control and a customizable vaping experience.",
@@ -215,7 +215,7 @@ export const pricingData = {
       "200,000+": 2.76,
     },
   },
-  "GLID-2001": {
+  "GLID-0201": {
     name: "SS Post 0.5 mL breath activated ",
     description:
       "Optimized for live resin enthusiasts, this stainless steel post disposable maximizes flavor retention with inhale activation and USB-C charging.",
@@ -227,7 +227,7 @@ export const pricingData = {
       "200,000+": 2.48,
     },
   },
-  "GLID-2002": {
+  "GLID-0202": {
     name: "SS Post 1mL breath activated ",
     description:
       "Optimized for live resin enthusiasts, this stainless steel post disposable maximizes flavor retention with inhale activation and USB-C charging.",
@@ -239,7 +239,7 @@ export const pricingData = {
       "200,000+": 2.48,
     },
   },
-  "GLID-2003": {
+  "GLID-0203": {
     name: "Double Barrel (0.5 mL x2)",
     description:
       "Designed for dual-strain or alternating flavors, this double-barrel disposable offers inhale activation, a 290mAh battery, and USB-C charging. A premium aluminum alloy build ensures durability while maintaining a sleek look.",
@@ -251,7 +251,7 @@ export const pricingData = {
       "200,000+": 2.76,
     },
   },
-  "GLID-2004": {
+  "GLID-0204": {
     name: "Double Barrel (1mL x2)",
     description:
       "Designed for dual-strain or alternating flavors, this double-barrel disposable offers inhale activation, a 290mAh battery, and USB-C charging. A premium aluminum alloy build ensures durability while maintaining a sleek look.",
@@ -263,7 +263,7 @@ export const pricingData = {
       "200,000+": 2.76,
     },
   },
-  "GLID-2005": {
+  "GLID-0205": {
     name: "Postless 0.5 w/ LCD",
     description:
       "A button-activated disposable with an intuitive LCD screen for voltage and battery monitoring. Crafted from aluminum alloy and ceramic, this device ensures smooth airflow, superior flavor retention, and USB-C fast charging.",
@@ -275,7 +275,7 @@ export const pricingData = {
       "200,000+": 3.0,
     },
   },
-  "GLID-2006": {
+  "GLID-0206": {
     name: "Postless 1mL w/ LCD",
     description:
       "A button-activated disposable with an intuitive LCD screen for voltage and battery monitoring. Crafted from aluminum alloy and ceramic, this device ensures smooth airflow, superior flavor retention, and USB-C fast charging.",
@@ -287,7 +287,7 @@ export const pricingData = {
       "200,000+": 3.0,
     },
   },
-  "GLID-2007": {
+  "GLID-0207": {
     name: "Postless 0.5 mL breath activated ",
     description:
       "A sleek, postless design with inhale activation for an effortless vaping experience. Featuring a ceramic heating core, food-grade PCTG material, and USB-C charging, this device delivers consistent vapor production and a premium user experience.",
@@ -299,7 +299,7 @@ export const pricingData = {
       "200,000+": 2.85,
     },
   },
-  "GLID-2008": {
+  "GLID-0208": {
     name: "Postless 1.0 mL breath activated ",
     description:
       "A sleek, postless design with inhale activation for an effortless vaping experience. Featuring a ceramic heating core, food-grade PCTG material, and USB-C charging, this device delivers consistent vapor production and a premium user experience.",
@@ -311,7 +311,7 @@ export const pricingData = {
       "200,000+": 2.85,
     },
   },
-  "GLID-2009": {
+  "GLID-0209": {
     name: "Round Box Breath Activated 1mL",
     description:
       "A compact, round box design optimized for breath activation and smooth vapor production. Equipped with a 280mAh battery, ceramic heating, and USB-C charging, this disposable is ideal for efficiency and portability.",
@@ -323,7 +323,7 @@ export const pricingData = {
       "200,000+": 3.2,
     },
   },
-  "GLID-2010": {
+  "GLID-0210": {
     name: "Round Box Breath Activated 2mL",
     description:
       "A compact, round box design optimized for breath activation and smooth vapor production. Equipped with a 280mAh battery, ceramic heating, and USB-C charging, this disposable is ideal for efficiency and portability.",
@@ -335,7 +335,7 @@ export const pricingData = {
       "200,000+": 3.2,
     },
   },
-  "GLID-2011": {
+  "GLID-0211": {
     name: "Postless 0.5 mL",
     description:
       "A sleek, postless design with button activation for precise control. Featuring a ceramic heating core, food-grade PCTG material, and USB-C charging, this device delivers consistent vapor production and a premium user experience.",
@@ -347,7 +347,7 @@ export const pricingData = {
       "200,000+": 2.76,
     },
   },
-  "GLID-2012": {
+  "GLID-0212": {
     name: "Postless 1 mL",
     description:
       "A sleek, postless design with button activation for precise control. Featuring a ceramic heating core, food-grade PCTG material, and USB-C charging, this device delivers consistent vapor production and a premium user experience.",
@@ -359,346 +359,10 @@ export const pricingData = {
       "200,000+": 2.76,
     },
   },
-  "GLID-6001": {
+  "GLID-0601": {
     name: "Large capacity Button Activated w/ LCD",
     description:
       "A large-capacity device featuring an LCD screen, adjustable voltage, top filling, and USB-C charging—designed for all types of oil.",
-    pricing: {
-      "10,000-24,999": 3.75,
-      "25,000-49,999": 3.69,
-      "50,000-99,999": 3.63,
-      "100,000-199,999": 3.5,
-      "200,000+": 3.43,
-    },
-  },
-};
-
-export const pricingDataOld = {
-  "GLIB-3001": {
-    name: "350 mAh Slim",
-    description:
-      "350 mAh Slim 510 battery. Reliable, true to capacity battery, USB-C Charge",
-    pricing: {
-      "10,000-24,999": 3.0,
-      "25,000-49,999": 2.95,
-      "50,000-99,999": 2.9,
-      "100,000-199,999": 2.85,
-      "200,000+": 2.8,
-    },
-  },
-  "GLIB-3002": {
-    name: "LCD 510 Thread Battery (12mm)",
-    description: "510 Battery with screen (12mm)",
-    pricing: {
-      "10,000-24,999": 3.5,
-      "25,000-49,999": 2.45,
-      "50,000-99,999": 3.4,
-      "100,000-199,999": 3.35,
-      "200,000+": 3.25,
-    },
-  },
-  "GLIB-3003": {
-    name: "LCD 510 Thread Battery (14mm)",
-    description: "510 Battery with screen (14mm)",
-    pricing: {
-      "10,000-24,999": 3.5,
-      "25,000-49,999": 3.45,
-      "50,000-99,999": 3.4,
-      "100,000-199,999": 3.35,
-      "200,000+": 3.25,
-    },
-  },
-  "GLIB-3004": {
-    name: "LCD 510 Thread Battery (16mm)",
-    description: "510 Battery with screen (16mm)",
-    pricing: {
-      "10,000-24,999": 4.0,
-      "25,000-49,999": 3.95,
-      "50,000-99,999": 3.9,
-      "100,000-199,999": 3.85,
-      "200,000+": 3.75,
-    },
-  },
-  "GLIB-3005": {
-    name: "510 Cartridge Battery",
-    description:
-      "Stealthy 510 Cover protects your cartridge and keeps your consumption discrete! Affordable, brandable, and with rapid USB-C charge capabilities",
-    pricing: {
-      "10,000-24,999": 6.0,
-      "25,000-49,999": 5.9,
-      "50,000-99,999": 5.8,
-      "100,000-199,999": 5.75,
-      "200,000+": 5.65,
-    },
-  },
-  "GLIC-1001": {
-    name: "Ceramic Core Cartridge (.5 mL)",
-    description: "All ceramic heating cartridge",
-    pricing: {
-      "10,000-24,999": 1.58,
-      "25,000-49,999": 1.58,
-      "50,000-99,999": 1.52,
-      "100,000-199,999": 1.45,
-      "200,000+": 1.32,
-    },
-  },
-  "GLIC-1002": {
-    name: "Ceramic Core Cartridge (1.0 mL)",
-    description: "All ceramic heating cartridge",
-    pricing: {
-      "10,000-24,999": 1.65,
-      "25,000-49,999": 1.65,
-      "50,000-99,999": 1.58,
-      "100,000-199,999": 1.52,
-      "200,000+": 1.39,
-    },
-  },
-  "GLIC-4001": {
-    name: "Titanium Core Cartridge (.5 mL)",
-    description: "Titanium core cartridge",
-    pricing: {
-      "10,000-24,999": 0.99,
-      "25,000-49,999": 0.99,
-      "50,000-99,999": 0.93,
-      "100,000-199,999": 0.88,
-      "200,000+": 0.88,
-    },
-  },
-  "GLIC-4002": {
-    name: "Titanium Core Cartridge (1.0 mL)",
-    description: "Titanium core cartridge",
-    pricing: {
-      "10,000-24,999": 0.99,
-      "25,000-49,999": 0.99,
-      "50,000-99,999": 0.93,
-      "100,000-199,999": 0.88,
-      "200,000+": 0.88,
-    },
-  },
-  "GLIC-6001": {
-    name: "Titanium Core Cartridge (3.0 mL)",
-    description: "Titanium cartridge; tank volume 3 mL",
-    pricing: {
-      "10,000-24,999": 1.65,
-      "25,000-49,999": 1.65,
-      "50,000-99,999": 1.58,
-      "100,000-199,999": 1.52,
-      "200,000+": 1.39,
-    },
-  },
-  "GLID-1001": {
-    name: "Small Capacity Ceramic Disposable (.3 mL)",
-    description:
-      "Very high quality heating element and airflow make this .3 mL the perfect vessel for high quality concentrate products",
-    pricing: {
-      "10,000-24,999": 2.94,
-      "25,000-49,999": 2.83,
-      "50,000-99,999": 2.77,
-      "100,000-199,999": 2.49,
-      "200,000+": 2.39,
-    },
-  },
-  "GLID-1002": {
-    name: "Ceramic disposable (1.0 mL)",
-    description: "",
-    pricing: {
-      "10,000-24,999": 3.75,
-      "25,000-49,999": 3.69,
-      "50,000-99,999": 3.63,
-      "100,000-199,999": 3.5,
-      "200,000+": 3.43,
-    },
-  },
-  "GLID-1003": {
-    name: "Ceramic disposable (2.0 mL)",
-    description: "",
-    pricing: {
-      "10,000-24,999": 3.75,
-      "25,000-49,999": 3.69,
-      "50,000-99,999": 3.63,
-      "100,000-199,999": 3.5,
-      "200,000+": 3.43,
-    },
-  },
-  "GLID-1004": {
-    name: "Titanium Post Disposable (0.5 mL)",
-    description: "",
-    pricing: {
-      "10,000-24,999": 3.0,
-      "25,000-49,999": 2.93,
-      "50,000-99,999": 2.87,
-      "100,000-199,999": 2.71,
-      "200,000+": 2.58,
-    },
-  },
-  "GLID-1005": {
-    name: "Titanium Post Disposable (1.0 mL)",
-    description: "",
-    pricing: {
-      "10,000-24,999": 3.0,
-      "25,000-49,999": 2.93,
-      "50,000-99,999": 2.87,
-      "100,000-199,999": 2.71,
-      "200,000+": 2.58,
-    },
-  },
-  "GLID-1006": {
-    name: "Postless .5 mL button activated Disposable",
-    description: "",
-    pricing: {
-      "10,000-24,999": 3.16,
-      "25,000-49,999": 3.11,
-      "50,000-99,999": 3.05,
-      "100,000-199,999": 2.89,
-      "200,000+": 2.76,
-    },
-  },
-  "GLID-1007": {
-    name: "Postless 1.0 mL button activated Disposable",
-    description: "",
-    pricing: {
-      "10,000-24,999": 3.16,
-      "25,000-49,999": 3.11,
-      "50,000-99,999": 3.05,
-      "100,000-199,999": 2.89,
-      "200,000+": 2.76,
-    },
-  },
-  "GLID-2001": {
-    name: "Live rosin disposable (.5 mL)",
-    description: "",
-    pricing: {
-      "10,000-24,999": 2.9,
-      "25,000-49,999": 2.83,
-      "50,000-99,999": 2.77,
-      "100,000-199,999": 2.61,
-      "200,000+": 2.48,
-    },
-  },
-  "GLID-2002": {
-    name: "Live rosin disposable (1 mL)",
-    description: "",
-    pricing: {
-      "10,000-24,999": 2.9,
-      "25,000-49,999": 2.83,
-      "50,000-99,999": 2.77,
-      "100,000-199,999": 2.61,
-      "200,000+": 2.48,
-    },
-  },
-  "GLID-2003": {
-    name: "Double Barrel (.5 mL + .5 mL)",
-    description: "",
-    pricing: {
-      "10,000-24,999": 3.16,
-      "25,000-49,999": 3.11,
-      "50,000-99,999": 3.05,
-      "100,000-199,999": 2.89,
-      "200,000+": 2.76,
-    },
-  },
-  "GLID-2004": {
-    name: "Double Barrel (1.0 mL + 1.0 mL)",
-    description: "",
-    pricing: {
-      "10,000-24,999": 3.16,
-      "25,000-49,999": 3.11,
-      "50,000-99,999": 3.05,
-      "100,000-199,999": 2.89,
-      "200,000+": 2.76,
-    },
-  },
-  "GLID-2005": {
-    name: "LCD screen disposable  (.5 mL)",
-    description: "LCD screen disposable",
-    pricing: {
-      "10,000-24,999": 3.2,
-      "25,000-49,999": 3.15,
-      "50,000-99,999": 3.1,
-      "100,000-199,999": 3.05,
-      "200,000+": 3.0,
-    },
-  },
-  "GLID-2006": {
-    name: "LCD screen disposable (1 mL)",
-    description: "LCD screen disposable",
-    pricing: {
-      "10,000-24,999": 3.2,
-      "25,000-49,999": 3.15,
-      "50,000-99,999": 3.1,
-      "100,000-199,999": 3.05,
-      "200,000+": 3.0,
-    },
-  },
-  "GLID-2007": {
-    name: "Live rosin disposable (.5 mL)",
-    description: "Live rosin disposable",
-    pricing: {
-      "10,000-24,999": 3.25,
-      "25,000-49,999": 3.25,
-      "50,000-99,999": 3.2,
-      "100,000-199,999": 2.99,
-      "200,000+": 2.85,
-    },
-  },
-  "GLID-2008": {
-    name: "Live rosin disposable (1 mL)",
-    description: "Live rosin disposable",
-    pricing: {
-      "10,000-24,999": 3.25,
-      "25,000-49,999": 3.25,
-      "50,000-99,999": 3.2,
-      "100,000-199,999": 2.99,
-      "200,000+": 2.85,
-    },
-  },
-  "GLID-2009": {
-    name: "(1 mL)",
-    description: "",
-    pricing: {
-      "10,000-24,999": 3.6,
-      "25,000-49,999": 3.55,
-      "50,000-99,999": 3.5,
-      "100,000-199,999": 3.35,
-      "200,000+": 3.2,
-    },
-  },
-  "GLID-2010": {
-    name: "(2 mL)",
-    description: "",
-    pricing: {
-      "10,000-24,999": 3.6,
-      "25,000-49,999": 3.55,
-      "50,000-99,999": 3.5,
-      "100,000-199,999": 3.35,
-      "200,000+": 3.2,
-    },
-  },
-  "GLID-2011": {
-    name: "Postless .5 mL",
-    description: "",
-    pricing: {
-      "10,000-24,999": 3.16,
-      "25,000-49,999": 3.11,
-      "50,000-99,999": 3.05,
-      "100,000-199,999": 2.89,
-      "200,000+": 2.76,
-    },
-  },
-  "GLID-2012": {
-    name: "Postless 1.0 mL",
-    description: "",
-    pricing: {
-      "10,000-24,999": 3.16,
-      "25,000-49,999": 3.11,
-      "50,000-99,999": 3.05,
-      "100,000-199,999": 2.89,
-      "200,000+": 2.76,
-    },
-  },
-  "GLID-6001": {
-    name: "Titanium Post 2 mL Disposable with LCD screen",
-    description: "D9 Live Resin 6~8% Terpene",
     pricing: {
       "10,000-24,999": 3.75,
       "25,000-49,999": 3.69,
