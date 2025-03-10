@@ -85,7 +85,7 @@ const PricingTool = () => {
       setAlert({
         show: true,
         message:
-          "Please enter a valid SKU - must be 9 characters (e.g. GLIC-1001)",
+          "Please enter a valid SKU - must be 9 characters (e.g. GLIC-0101)",
         type: "error",
       });
       return;
@@ -107,7 +107,7 @@ const PricingTool = () => {
       setAlert({
         show: true,
         message:
-          "SKU not found - please verify correct format (e.g. GLIC-1001)",
+          "SKU not found - please verify correct format (e.g. GLIC-0101)",
         type: "error",
       });
       return;
