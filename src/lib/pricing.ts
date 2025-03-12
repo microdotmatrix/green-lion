@@ -436,6 +436,7 @@ export const initialPricingData = {
   },
 };
 
+// Example schema with specs added
 export const skuList = {
   "GLIB-3001": {
     name: "350mAh Slim",
