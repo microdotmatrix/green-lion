@@ -64,7 +64,7 @@ export const pricingData = {
     description:
       "A patented ceramic design with faster heating, a larger contact surface area, and cotton-free construction for consistent vapor and no dry burns.",
     pricing: {
-      "10,000-24,999": 1.58,
+      "10,000-24,999": 1.65,
       "25,000-49,999": 1.58,
       "50,000-99,999": 1.52,
       "100,000-199,999": 1.45,
@@ -76,7 +76,7 @@ export const pricingData = {
     description:
       "A patented ceramic design with faster heating, a larger contact surface area, and cotton-free construction for consistent vapor and no dry burns.",
     pricing: {
-      "10,000-24,999": 1.65,
+      "10,000-24,999": 1.72,
       "25,000-49,999": 1.65,
       "50,000-99,999": 1.58,
       "100,000-199,999": 1.52,
