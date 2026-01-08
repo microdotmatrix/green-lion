@@ -28,7 +28,5 @@ export type NavLinks = {
 export const NAV_LINKS: NavLinks[] = [
   { link: "about", title: "About" },
   { link: "services", title: "Services" },
-  { link: "products", title: "Products" },
-  { link: "clients", title: "Clients" },
   { link: "contact", title: "Contact" },
 ];
